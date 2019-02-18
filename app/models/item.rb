@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :user
-  has_one :renter, through: :request, source: :user, optional: true
+  has_many :renters, through: :request, source: :user
 
   mount_uploader :photo, PhotoUploader
 
