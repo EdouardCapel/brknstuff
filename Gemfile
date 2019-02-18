@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+# Gem added
+gem 'devise'
+gem 'cloudinary', '~> 1.9.1'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'carrierwave', '~> 1.2'
+
+# Gem default
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
