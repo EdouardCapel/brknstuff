@@ -5,6 +5,10 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
+  def myitems
+    @user_items = Item.where(user: current_user)
+  end
+
   def show
     @item = Item.find(params[:id])
   end
