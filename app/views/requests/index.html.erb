@@ -1,0 +1,12 @@
+<h1>requests/index.html.erb</h1>
+
+<h4>View your requests:</h4>
+
+<div class ="display-requests">
+  <% @requests.each do |request| %>
+    <p><%= request.item_id.name %></p>
+    <p><%= request.user_id.name %></p>
+    <p><%= request.created_at %></p>
+    <p><%= request.status %></p>
+  <% end %>
+</div>

@@ -9,6 +9,7 @@ class RequestsController < ApplicationController
   end
 
   def new
+    @item = Item.find(params[:item_id])
     @request = Request.new
   end
 
