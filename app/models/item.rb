@@ -3,7 +3,6 @@ class Item < ApplicationRecord
   has_many :renters, through: :request, source: :user
   has_many :requests
 
-
   mount_uploader :photo, PhotoUploader
 
   validates :name, presence: true
