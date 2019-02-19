@@ -1,7 +1,8 @@
 class RequestsController < ApplicationController
 
   def index
-    @requests = Request.all
+    @owner_items = current_user.items
+    @user_requests = Request.where(user: current_user)
   end
 
   def show
@@ -23,12 +24,13 @@ class RequestsController < ApplicationController
 
   def create
     @item = Item.find(params[:item_id])
-    @request = Request.new(request_params)
+    @request = Request.new
+    @request.status = '0'
     @request.item = @item
     @request.user = current_user
 
     if @request.save!
-      redirect_to items_requests_path
+      redirect_to requests_path
     else
       render :new
     end
@@ -44,5 +46,5 @@ end
 private
 
 def request_params
-  params.require(:request).permit(:user, :item, :status)
+  params.require(:request).permit(:status)
 end
