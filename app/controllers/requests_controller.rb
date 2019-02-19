@@ -22,10 +22,13 @@ class RequestsController < ApplicationController
   end
 
   def create
-    @request = Request.new(item_params)
+    @item = Item.find(params[:item_id])
+    @request = Request.new(request_params)
+    @request.item = @item
+    @request.user = current_user
 
     if @request.save!
-      # redirect_to items_path(...)
+      redirect_to items_requests_path
     else
       render :new
     end
@@ -36,11 +39,10 @@ class RequestsController < ApplicationController
     @request.destroy
     # redirect_to items_path(...)
   end
-
 end
 
 private
 
-def item_params
-  params.require(:item).permit(:name, :description, :price, :level, :photo)
+def request_params
+  params.require(:request).permit(:user, :item, :status)
 end
