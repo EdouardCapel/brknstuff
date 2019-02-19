@@ -1,1 +1,10 @@
-<h1>fuck off world</h1>
+<h1>My Items</h1>
+
+<% @user_items.each do |item| %>
+  <ul class="list-inline">
+    <li><%= item.name %></li>
+    <li><%= item.description %></li>
+    <li><%= item.level %></li>
+    <li>$<%= item.price %></li>
+  </ul>
+<% end %>
