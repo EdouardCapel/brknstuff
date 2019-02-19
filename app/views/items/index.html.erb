@@ -6,12 +6,16 @@
   <div class="row">
     <% @items.each do |item| %>
       <div class="col-xs-6 col-sm-4 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
-          <div class="card-title"><h1>Rocket</h1></div>
-          <div class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-          <a href="card-link" href=<%= item_path(item) %>></a>
-        </div>
+        <%= link_to item_path(item) do  %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+            <div class="card-title"><p><%= item.name %></p></div>
+            <div class="card-description"><%= item.description %></div>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
+</div>
+<div class="text-center">
+  <%= link_to "Add Item", new_item_path, class: "btn btn-success" %>
 </div>

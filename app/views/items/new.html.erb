@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="text-center">
+    <h1>Add an item</h1>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+          <div class="simple_form">
+            <%= simple_form_for @item do |f| %>
+              <%= f.input :name %>
+              <%= f.input :description %>
+              <%= f.input :price %>
+              <%= f.input :level %>
+              <%= f.input :photo %>
+              <%= f.input :photo_cache, as: :hidden %>
+              <%= f.submit "Create item", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <p><%= link_to "Back to list of items", items_path %></p>
+  </div>
+</div>
+

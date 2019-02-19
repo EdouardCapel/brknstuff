@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+
+  root to: 'items#index'
   resources :requests, only: :index
+
   resources :items do
     resources :requests, only: [:new, :create, :show]
   end
