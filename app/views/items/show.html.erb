@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="item-image"></div>
+  <div class="item-name">
+    <h1 class="text-center"><%= @item.name %></h1>
+  </div>
+  <div class="item-description">
+    <p><%= @item.description %></p>
+  </div>
+  <div class="cta">
+    <p><%= link_to "Rent this item",  new_item_request_path, class: "btn btn-success" %></p>
+  </div>
+</div>
