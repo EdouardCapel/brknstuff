@@ -15,34 +15,32 @@
 
       <!-- displayed on laptops -->
       <div class="navbar-brknstuff-actions d-none d-sm-flex">
-        <p class="navbar-brknstuff-link"><%= link_to "Sign in",  new_user_session_path%></p>
-        <div class="badge-container">
-          <p class="navbar-brknstuff-link"><%= link_to "Sign up",  new_user_registration_path%></p>
-        </div>
-        <p class="navbar-brknstuff-link"><%= link_to "Logout",  destroy_user_session_path%></p>
+
         <p class="navbar-brknstuff-link"><%= link_to "My Items",  myitems_path%></p>
         <p class="navbar-brknstuff-link"><%= link_to "My Requests",  requests_path%></p>
-<!--         <div class="dropdown">
-          <img src='https://kitt.brknstuff.com/placeholder/users/cveneziani' class="avatar dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+        <div class="add-item">
+          <%= link_to "Add Item", new_item_path, class: "btn btn-success" %>
+        </div>
+
+        <div class="dropdown">
+          <!-- <img src='https://kitt.brknstuff.com/placeholder/users/cveneziani' class="avatar dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/> -->
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Account</a>
-              <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Settings</a>
-              <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+              <p class="navbar-brknstuff-link"><%= link_to "Sign up",  new_user_registration_path%></p>
+              <p class="navbar-brknstuff-link"><%= link_to "Sign in",  new_user_session_path%></p>
+              <p class="navbar-brknstuff-link"><%= link_to "Logout",  destroy_user_session_path%></p>
             </div>
-         </div> -->
+         </div>
       </div>
 
       <!-- displayed on phone / tablet -->
       <div class="navbar-brknstuff-actions d-block d-sm-none">
         <div class="dropdown">
-          <!-- <i class="fas fa-bars" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i> -->
-<!--           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-            <a href="#" class="dropdown-item"><i class="fas fa-home"></i> Browse flats</a>
-            <a href="#" class="dropdown-item"><i class="fas fa-comments"></i> Messages <span class="badge badge-pill badge-secondary text-white">5</span></a>
-            <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Account</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Settings</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
-          </div> -->
+          <i class="fas fa-bars" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <p class="navbar-brknstuff-link"><%= link_to "Sign up",  new_user_registration_path%></p>
+              <p class="navbar-brknstuff-link"><%= link_to "Sign in",  new_user_session_path%></p>
+              <p class="navbar-brknstuff-link"><%= link_to "Logout",  destroy_user_session_path%></p>
+          </div>
         </div>
       </div>
     </div>
