@@ -46,7 +46,7 @@ nbr_request.times do
   item = all_item.sample
   renter = all_user.sample
   # Change user(Renter) if same as item.user(Owner)
-  while renter != item.user
+  while renter == item.user
     renter = all_user.sample
   end
   request = Request.new(
