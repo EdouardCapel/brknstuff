@@ -1,12 +1,49 @@
 <h1>requests/index.html.erb</h1>
 
-<h4>View your requests:</h4>
+<div class ="display-owner-requests">
 
-<div class ="display-requests">
-  <% @requests.each do |request| %>
-    <p><%= request.item_id.name %></p>
-    <p><%= request.user_id.name %></p>
-    <p><%= request.created_at %></p>
-    <p><%= request.status %></p>
+  <h4>View requests you have made (for someone eles' stuff):</h4>
+
+  <% @user_requests.each do |request| %>
+    <ul class="list-inline">
+      <li><%= request.item.name %></li>
+      <li><%= request.user.email %></li>
+      <li><%= request.created_at %></li>
+      <% case request.status %>
+        <% when "0" %>
+          <li>Pending</li>
+        <% when "1" %>
+          <li>Accepted</li>
+        <% when "2" %>
+          <li>Declined</li>
+      <% end %>
+    </ul>
   <% end %>
 </div>
+
+<div class ="display-user-requests">
+
+  <h4>View requests you have received (for my stuff):</h4>
+
+  <% @owner_items.each do |item| %>
+    <ul class="list-inline">
+      <% next if item.requests.size == 0 %>
+        <% item.requests.each do |request| %>
+          <li><%= request.item.name %></li>
+          <li><%= request.user.email %></li>
+          <li><%= request.created_at %></li>
+          <% case request.status %>
+            <% when "0" %>
+              <li>Pending</li>
+            <% when "1" %>
+              <li>Accepted</li>
+            <% when "2" %>
+              <li>Declined</li>
+          <% end %>
+        <% end %>
+    </ul>
+  <% end %>
+</div>
+
+
+
