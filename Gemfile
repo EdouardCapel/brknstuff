@@ -6,6 +6,7 @@ gem 'devise'
 gem 'cloudinary', '~> 1.9.1'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'carrierwave', '~> 1.2'
+gem 'faker'
 
 # Gem default
 gem 'bootsnap', require: false
