@@ -7,7 +7,7 @@
     <% @items.each do |item| %>
       <div class="col-xs-6 col-sm-4 col-md-3">
         <%= link_to item_path(item) do  %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%=item.photo%>)";>
             <div class="card-title"><p><%= item.name %></p></div>
             <div class="card-description"><%= item.description %></div>
           </div>
