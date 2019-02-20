@@ -1,6 +1,22 @@
 <h1>/items/:id/requests/new.html.erb</h1>
 
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
 
-<%= simple_form_for [@item, @request] do |f| %>
-  <%= f.submit "Confirm request to rent", class: "btn btn-primary" %>
-<% end %>
+    <%= simple_form_for [@item, @request] do |f| %>
+      <div class="input-group input-daterange">
+          <input name="start" type="text" class="form-control" autocomplete="off">
+          <div class="input-group-addon">to</div>
+          <input name="end" type="text" class="form-control" autocomplete="off">
+      </div>
+
+      <%= f.submit "Confirm dates", class: "btn btn-primary submit" %>
+    <% end %>
+
+    </div>
+  </div>
+ </div>
+</div>
+
