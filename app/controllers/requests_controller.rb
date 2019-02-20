@@ -27,7 +27,11 @@ class RequestsController < ApplicationController
 
   def create
     @item = Item.find(params[:item_id])
-    @request = Request.new
+
+    start = Date.parse(params[:start])
+    finish = Date.parse(params[:end])
+
+    @request = Request.new({start_date: start, end_date: finish})
     @request.status = '0'
     @request.item = @item
     @request.user = current_user

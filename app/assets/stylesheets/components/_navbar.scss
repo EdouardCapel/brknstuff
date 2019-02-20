@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
+  background: #d84c73;
   padding: 16px 24px;
 }
 
@@ -11,8 +11,11 @@
 }
 
 .navbar-brknstuff .navbar-brknstuff-actions {
+  width: 100%;
+  justify-content: space-between;
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .navbar-brknstuff .navbar-brknstuff-actions .navbar-brknstuff-link {
@@ -31,3 +34,36 @@
 .navbar-brknstuff .dropdown-toggle {
   cursor: pointer;
 }
+
+.navbar-brknstuff-title a {
+  font-family: 'Freckle Face', cursive;
+  color: white;
+  font-size: 40px;
+  &:hover {
+    color: #35234b;
+  }
+}
+
+.dropdown {
+  padding: 0px 12px;
+  font-size: 40px;
+}
+
+.btn {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  background-color: #35234b;
+  border-radius: 0px;
+  box-shadow: 10px 10px 0px 0px #5c3b6f;
+  &:hover{
+    color: #35234b;
+    background-color: white;
+  }
+}
+
