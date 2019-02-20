@@ -14,14 +14,24 @@
   background-color: rgba(230, 230, 230, 0.8);
 }
 
+.card-title {
+  padding: 15px;
+}
+
 .card-title a:link, a:hover, a:active, a:visited {
   text-decoration: none;
 }
 
 a {
-  color: black;
+  color: #5c3b6f;
+  opacity: 0.75;
   &:hover {
-    color: black;
+    color: #5c3b6f;
+    opacity: 0.9;
   }
 }
 
+.card-description {
+  padding-left: 15px;
+  font-size: 12px;
+}
