@@ -1,8 +1,9 @@
 <div class ="display-owner-requests">
 
-  <h4>View requests you have made (for someone eles' stuff):</h4>
+  <h4>View requests you have made (for someone elses' stuff):</h4>
 
   <% @user_requests.each do |request| %>
+
     <div class="message">
       <div class="message-name">
         <p><%= request.item.name %></p>
@@ -14,16 +15,17 @@
         <p class="status pending">
           <% case request.status %>
           <% when "0" %>
-            <p>Pending</p>
+            <p class="gray-text">Pending</p>
           <% when "1" %>
-            <p>Accepted</p>
+            <p class="green-text">Accepted</p>
           <% when "2" %>
-            <p>Declined</p>
+            <p class="red-text">Declined</p>
           <% end %>
         </p>
         <p class="price"><%= request.created_at %></p>
       </div>
     </div>
+
   <% end %>
 </div>
 
@@ -32,54 +34,40 @@
   <h4>View requests you have received (for my stuff):</h4>
 
   <% @owner_items.each do |item| %>
-    <% next if item.requests.size == 0 %>
+    <% if item.requests.size > 0 %>
       <% item.requests.each do |request| %>
+
         <div class="message">
+
           <div class="message-name">
             <p><%= request.item.name %></p>
           </div>
-        <div class="message-body">
-          <p><%= request.user.email %></p>
+
+          <div class="message-body">
+            <p><%= request.user.email %></p>
+          </div>
+
+          <div class="message-status">
+            <p> <%=request.status %> </p>
+              <% case request.status %>
+                <% when "0" %>
+                  <p>waiting for approval</p>
+                    <div uk-dropdown>
+                      <%= link_to("Accept", request_path(request, { status: '1' }), method: :patch) %>
+                      <%= link_to("Decline", request_path(request, { status: '2' }), method: :patch) %>
+                    </div>
+                <% when "1" %>
+                  <p class="green-text">Accepted</p>
+                <% when "2" %>
+                  <p class="red-text">Declined</p>
+              <% end %>
+            <p class="price"> <%= request.created_at %> </p>
+          </div>
+
         </div>
-        <div class="message-status">
-          <p class="status pending">
-            <% case request.status %>
-            <% when "0" %>
-              <p>Pending</p>
-            <% when "1" %>
-              <p>Accepted</p>
-            <% when "2" %>
-              <p>Declined</p>
-            <% end %>
-          </p>
+
       <% end %>
-        <p class="price">%= request.created_at %></p>
-      </div>
-    </div>
+    <% end %>
   <% end %>
+
 </div>
-
-
-
-
-<!--
-  <% @owner_items.each do |item| %>
-    <ul class="list-inline">
-      <% next if item.requests.size == 0 %>
-        <% item.requests.each do |request| %>
-          <li><%= request.item.name %></li>
-          <li><%= request.user.email %></li>
-          <li><%= request.created_at %></li>
-          <% case request.status %>
-            <% when "0" %>
-              <li>Pending</li>
-            <% when "1" %>
-              <li>Accepted</li>
-            <% when "2" %>
-              <li>Declined</li>
-          <% end %>
-        <% end %>
-    </ul>
-  <% end %>
-</div> -->
-
