@@ -6374,6 +6374,11 @@ uglifyjs-webpack-plugin@^1.2.7:
     webpack-sources "^1.1.0"
     worker-farm "^1.5.2"
 
+uikit@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.0.3.tgz#ead1b0a152d2771d2684f60086766ccc50fa3450"
+  integrity sha512-Z73TXlnfJCAXczg5mFCZSTwR0Ii1wW2fZumfIR8G1x1x4SyKHpkU0JCZDoIryYFMu1gSpvy5hZiXk3t4i5tTlw==
+
 union-value@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/union-value/-/union-value-1.0.0.tgz#5c71c34cb5bad5dcebe3ea0cd08207ba5aa1aea4"

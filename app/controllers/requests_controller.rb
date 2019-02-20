@@ -20,6 +20,9 @@ class RequestsController < ApplicationController
 
   def update
     @request = Request.find(params[:id])
+    @request.status = params[:status]
+    @request.save
+    redirect_to requests_path
   end
 
   def create
