@@ -1,0 +1,19 @@
+.search-bar {
+  padding: 30px;
+  width: 100vh;
+  text-align:center;
+}
+
+.search-bar input {
+  padding: 12px;
+  border-radius: 25px;
+  width: 1000px;
+  border: solid;
+  border-color: #35234b;
+  border-width: 4px;
+}
+
+::placeholder {
+  color: #5c3b6f;
+  text-decoration: none;
+}

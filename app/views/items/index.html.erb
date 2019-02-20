@@ -1,19 +1,23 @@
 <div class="container">
-  <h1 class="text-center">Items for rent</h1>
   <div class="search-bar">
-    <input type="text" placeholder="Search..">
+    <input type="text" placeholder="Search for an item..">
   </div>
-  <div class="row">
+  <div class="cards">
     <% @items.each do |item| %>
-      <div class="col-xs-6 col-sm-4 col-md-3">
-        <%= link_to item_path(item) do  %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%=item.photo%>)";>
-            <div class="card-title"><p><%= item.name %></p></div>
+      <%= link_to item_path(item) do  %>
+        <div class="card">
+          <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1508693484929-012827ef8c81)";></div>
+          <div class="card-details">
+            <div class="card-title"> <%= item.name %> </div>
             <div class="card-description"><%= item.description %></div>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
+
+<!-- Replace unsplash url line 11 with item.photo in ruby code -->
+
+
 

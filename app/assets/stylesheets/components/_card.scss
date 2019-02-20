@@ -1,0 +1,27 @@
+.card {
+  height: 300px;
+  box-shadow: 20px 20px 0px 0px #d84c73;
+  margin: 20px;
+}
+
+.card-img {
+  height: 200px;
+  background-size: cover;
+}
+
+.card-details {
+  height: 100px;
+  background-color: rgba(230, 230, 230, 0.8);
+}
+
+.card-title a:link, a:hover, a:active, a:visited {
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  &:hover {
+    color: black;
+  }
+}
+

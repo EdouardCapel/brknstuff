@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+
+    <title>BrKnStuFf</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -11,13 +12,11 @@
   </head>
   <body>
     <div class="navbar-brknstuff">
-      <p class="navbar-brknstuff-link"><%= link_to "BrKnStUFf",  items_path%></p>
+      <div class="navbar-brknstuff-title"><%= link_to "BrKnStUFf",  items_path%></div>
 
       <!-- displayed on laptops -->
       <div class="navbar-brknstuff-actions d-none d-sm-flex">
 
-        <p class="navbar-brknstuff-link"><%= link_to "My Items",  myitems_path%></p>
-        <p class="navbar-brknstuff-link"><%= link_to "My Requests",  requests_path%></p>
         <div class="add-item">
           <%= link_to "Add Item", new_item_path, class: "btn btn-success" %>
         </div>
@@ -25,6 +24,8 @@
         <div class="dropdown">
           <!-- <img src='https://kitt.brknstuff.com/placeholder/users/cveneziani' class="avatar dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/> -->
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <p class="navbar-brknstuff-link"><%= link_to "My Requests",  requests_path%></p>
+              <p class="navbar-brknstuff-link"><%= link_to "My Items",  myitems_path%></p>
               <p class="navbar-brknstuff-link"><%= link_to "Sign up",  new_user_registration_path%></p>
               <p class="navbar-brknstuff-link"><%= link_to "Sign in",  new_user_session_path%></p>
               <p class="navbar-brknstuff-link"><%= link_to "Logout",  destroy_user_session_path%></p>
