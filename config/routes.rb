@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   get "/myitems", to: "items#myitems"
+  get "/myrequests", to: "requests#myrequests"
 
   root to: 'items#index'
 
