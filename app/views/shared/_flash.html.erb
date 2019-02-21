@@ -1,0 +1,5 @@
+<% if !user_signed_in? %>
+  <div class="flash flash-signup">
+    <span>You look like you got a lot of trash! <strong><%= link_to "Sign up/Login",  new_user_registration_path %></strong> to improve your life 😎</span>
+  </div>
+<% end %>
