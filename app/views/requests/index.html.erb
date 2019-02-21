@@ -18,7 +18,7 @@
   <div class ="display-container">
 
     <% if @owner_items.size == 0 %>
-      <h3>No one wants your trash!</h3>
+      <h3>No one wants your <span style= "font-family:Freckle Face; font-size:150%;">trash!</span></h3>
     <% else %>
       <% @owner_items.each do |item| %>
         <% if item.requests.size > 0 %>

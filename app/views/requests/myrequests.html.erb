@@ -18,7 +18,8 @@
  <div class ="display-container">
 
     <% if @user_requests.size == 0 %>
-      <h3>Go rent something, dummy!</h3>
+      <h3>Go rent something, <span style= "font-family:Freckle Face; font-size:150%;">Dummy!</span></h3>
+
     <% else %>
       <% @user_requests.each do |request| %>
         <div class="message">
