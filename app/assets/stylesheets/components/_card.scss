@@ -2,6 +2,11 @@
   height: 300px;
   box-shadow: 20px 20px 0px 0px #d84c73;
   margin: 20px;
+  &:hover {
+    .card-details {
+      background-color: rgb(250, 250, 250);
+    }
+  }
 }
 
 .card-img {
@@ -11,7 +16,7 @@
 
 .card-details {
   height: 100px;
-  background-color: rgba(230, 230, 230, 0.8);
+  background-color: rgb(230, 230, 230);
 }
 
 .card-title {
@@ -24,10 +29,8 @@
 
 a {
   color: #5c3b6f;
-  opacity: 0.75;
   &:hover {
     color: #5c3b6f;
-    opacity: 0.9;
   }
 }
 
