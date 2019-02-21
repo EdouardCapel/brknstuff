@@ -10,7 +10,7 @@
     <a class="tab" href="/requests">
       <p>Incoming Requests</p>
     </a>
-    <a class="tab" href="#">
+    <a class="tab" href="/">
       <p>Complaints</p>
     </a>
   </div>
@@ -24,7 +24,7 @@
       <ul class="list-inline">
         <div class="message">
           <div class="message-name">
-            <p><%= item.name %></p>
+            <p><strong><%= item.name %></strong></p>
           </div>
           <div class="message-body">
             <p><%= item.description %></p>
@@ -34,6 +34,7 @@
             <p class="price">$<%= item.price %></p>
           </div>
         </div>
+      </ul>
     <% end %>
   <% end %>
 </div>
