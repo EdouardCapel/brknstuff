@@ -1,0 +1,39 @@
+.tabs {
+  background: #ff8484;
+  display: flex;
+  padding: 40px 0px 0px 0px;
+}
+.tabs a {
+  color: #999999;
+}
+.tabs a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.tabs h3 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.tabs p {
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+.tab {
+  background: #35234b;
+  flex: 0 0 25%;
+  text-align: center;
+  padding: 20px 0;
+}
+.tab:first-child {
+  border-radius: 25px 0 0 0;
+}
+.tab:last-child {
+  border-radius: 0 25px 0 0;
+}
+.tab.active {
+  background: white;
+  color: #35234b;
+  opacity: 1;
+}
