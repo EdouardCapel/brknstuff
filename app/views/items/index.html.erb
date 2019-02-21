@@ -4,7 +4,7 @@
   </div>
   <div class="cards">
     <% @items.each do |item| %>
-      <%= link_to item_path(item), data: { target: "#brokenModal", toggle: "modal"
+      <%= link_to item_path(item), data: { target: "#brokenModal-#{item.id}", toggle: "modal"
       } do  %>
         <div class="card">
           <div class="card-img" style="background-image: url(<%= item.photo %>)";></div>
@@ -13,15 +13,17 @@
             <div class="card-description"><%= item.description %></div>
           </div>
         </div>
+
+
       <% end %>
+      <div class="modal fade" id="brokenModal-<%= item.id %>" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content modal-style">
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
 
-<div class="modal fade" id="brokenModal" tabindex="-1" role="dialog" aria-labelledby="brokenModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content modal-style">
-    </div>
-  </div>
-</div>
 
