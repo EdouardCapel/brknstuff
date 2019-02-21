@@ -11,6 +11,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+
+    render layout: false
   end
 
   def new
