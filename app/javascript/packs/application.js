@@ -9,8 +9,6 @@ let inputData = $('.input-daterange input').each(function() {
     $(this).datepicker({format: 'dd/mm/yyyy'});
 });
 
-let submit = document.querySelector(".submit");
-
-submit.addEventListener("click", function(){
-  console.log(inputData[0].value, inputData[1].value);
-});
+// $('#brokenModal').on('hidden.bs.modal', function(e) {
+//   $(this).find('#form2')[0].reset();
+// });
