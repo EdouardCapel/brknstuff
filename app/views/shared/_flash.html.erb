@@ -1,5 +1,11 @@
 <% if !user_signed_in? %>
   <div class="flash flash-signup">
-    <span>You look like you got a lot of trash! <strong><%= link_to "Sign up/Login",  new_user_registration_path %></strong> to improve your life 😎</span>
+    <span>You look like you got a lot of trash! <strong><%= link_to "Sign up",  new_user_registration_path %></strong> or <strong><%= link_to "Login",  new_user_session_path %></strong> to improve your life! &nbsp <i class="fas fa-trash"></i></span>
   </div>
+
+<% else %>
+  <div class="flash flash-signup">
+    <span>Hey <span id="looser">looser</span> ! Tell your friends (if any) about <span class= "special-font">BrKnStuFf</span> and you might get a 10% discount. </span>
+  </div>
+
 <% end %>

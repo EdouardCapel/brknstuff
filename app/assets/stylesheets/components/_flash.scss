@@ -20,3 +20,22 @@
 .flash-signup a {
   color: #d84c73;
 }
+
+
+// #looser {
+//   color: white;
+//   font-weight: bold;
+//   font-family:Freckle Face;
+//   font-size:130%;
+// }
+
+.special-font {
+  color: #d84c73;
+  font-weight: bold;
+  font-family:Freckle Face;
+  font-size:130%;
+  &:hover {
+    color: white;
+  }
+}
+
