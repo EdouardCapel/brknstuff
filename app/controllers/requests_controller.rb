@@ -48,6 +48,11 @@ class RequestsController < ApplicationController
     @request.destroy
     # redirect_to items_path(...)
   end
+
+  def myrequests
+    # @owner_items = current_user.items
+    @user_requests = Request.where(user: current_user)
+  end
 end
 
 private
