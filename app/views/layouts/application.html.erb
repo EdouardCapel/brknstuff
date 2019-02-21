@@ -36,7 +36,7 @@
             <p class="navbar-brknstuff-link"><%= link_to "My Items",  myitems_path%></p>
             <p class="navbar-brknstuff-link"><%= link_to "Sign up",  new_user_registration_path%></p>
             <p class="navbar-brknstuff-link"><%= link_to "Sign in",  new_user_session_path%></p>
-            <p class="navbar-brknstuff-link"><%= link_to "Logout",  destroy_user_session_path%></p>
+            <p class="navbar-brknstuff-link"><%= link_to "Logout",  destroy_user_session_path,  :method => :delete%></p>
           </div>
         </div>
       </div>
