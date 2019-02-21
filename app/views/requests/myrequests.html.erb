@@ -1,0 +1,48 @@
+ <div class="container">
+
+  <div class="tabs">
+    <a class="tab" href="/myitems">
+      <p>My Items</p>
+    </a>
+    <a class="tab active" href="/myrequests">
+      <p>My requests</p>
+    </a>
+    <a class="tab" href="/requests">
+      <p>Incoming Requests</p>
+    </a>
+    <a class="tab" href="#">
+      <p>Complaints</p>
+    </a>
+  </div>
+
+ <div class ="display-container">
+
+    <% if @user_requests.size == 0 %>
+      <h3>Go rent something, dummy!</h3>
+    <% else %>
+      <% @user_requests.each do |request| %>
+        <div class="message">
+          <div class="message-name">
+            <p><%= request.item.name %></p>
+          </div>
+          <div class="message-body">
+            <p><%= request.user.email %></p>
+          </div>
+          <div class="message-status">
+            <p class="status pending">
+              <% case request.status %>
+              <% when "0" %>
+                <p class="gray-text">Pending</p>
+              <% when "1" %>
+                <p class="green-text">Accepted</p>
+              <% when "2" %>
+                <p class="red-text">Declined</p>
+              <% end %>
+            </p>
+            <p class="price"><%= request.created_at %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
