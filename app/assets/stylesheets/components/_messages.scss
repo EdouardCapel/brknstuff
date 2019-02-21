@@ -11,8 +11,9 @@
   flex-grow: 1;
 }
 .message-name {
-  padding-left: 10px;
-  min-width: 100px;
+  padding-left: 20px;
+  width: 300px;
+  text-align: left;
 }
 .message-name h3 {
   font-size: 13px;
@@ -28,6 +29,7 @@
   padding-left: 10px;
   font-size: 13px;
   color: rgba(0,0,0,0.7);
+  text-align: left;
 }
 .message-body {
   padding-left: 20px;

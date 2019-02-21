@@ -10,18 +10,20 @@
     <a class="tab active" href="/requests">
       <p>Incoming Requests</p>
     </a>
-    <a class="tab" href="#">
+    <a class="tab" href="/">
       <p>Complaints</p>
     </a>
   </div>
 
   <div class ="display-container">
 
-    <% if @owner_items.size == 0 %>
-      <h3>No one wants your <span style= "font-family:Freckle Face; font-size:150%;">trash!</span></h3>
-    <% else %>
+      <% total_requests = 0 %>
+
       <% @owner_items.each do |item| %>
+
         <% if item.requests.size > 0 %>
+        <% total_requests += item.requests.size %>
+
           <% item.requests.each do |request| %>
             <div class="message">
               <div class="message-name">
@@ -49,6 +51,8 @@
           <% end %>
         <% end %>
       <% end %>
-    <% end %>
+      <% if total_requests == 0 %>
+        <h3>No one wants your <span style= "font-family:Freckle Face; font-size:150%;">trash!</span></h3>
+      <% end %>
   </div>
 </div>
