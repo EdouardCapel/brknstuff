@@ -22,12 +22,18 @@
   <% else %>
     <% @user_items.each do |item| %>
       <ul class="list-inline">
-        <li><%= item.name %></li>
-        <li><%= item.description %></li>
-        <li><%= item.level %></li>
-        <li>$<%= item.price %></li>
-      </ul>
+        <div class="message">
+          <div class="message-name">
+            <p><%= item.name %></p>
+          </div>
+          <div class="message-body">
+            <p><%= item.description %></p>
+          </div>
+          <div class="message-status">
+            <p class="status pending">Damage level: <%= item.level %></p>
+            <p class="price">$<%= item.price %></p>
+          </div>
+        </div>
     <% end %>
   <% end %>
-
 </div>

@@ -31,7 +31,6 @@
                 <p><%= request.user.email %></p>
               </div>
               <div class="message-status">
-                <p> <%=request.status %> </p>
                   <% case request.status %>
                     <% when "0" %>
                       <p>waiting for approval</p>
