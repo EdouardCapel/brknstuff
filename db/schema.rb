@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_170403) do
     t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
+    t.string "photo", default: "https://res.cloudinary.com/djky9y7t0/image/upload/v1550615358/msxjzr4dczdqk6xn0w14.png"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 

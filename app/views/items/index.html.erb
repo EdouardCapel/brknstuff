@@ -7,7 +7,7 @@
       <%= link_to item_path(item), data: { target: "#brokenModal-#{item.id}", toggle: "modal"
       } do  %>
         <div class="card">
-          <div class="card-img" style="background-image: url(<%= item.photo %>)";></div>
+          <div class="card-img break-anim" style="background-image: url(<%= item.photo %>)";></div>
           <div class="card-details">
             <div class="card-title"> <%= item.name %> </div>
             <div class="card-description"><%= item.description %></div>
@@ -26,4 +26,10 @@
   </div>
 </div>
 
+<!-- Replace unsplash url line 11 with item.photo in ruby code -->
+
+<!-- Break image -->
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/delaunay.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
 
