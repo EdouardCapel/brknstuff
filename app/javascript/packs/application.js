@@ -9,6 +9,7 @@ let inputData = $('.input-daterange input').each(function() {
     $(this).datepicker({format: 'dd/mm/yyyy'});
 });
 
+
 var container_list = document.querySelectorAll('.break-anim');
 
 container_list.forEach((container) => {

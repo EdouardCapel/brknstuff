@@ -3,6 +3,10 @@ body {
   background-color: #ff8484;
 }
 
-h1 {
+h1, h2, h3, h4 {
   color: #5c3b6f;
+}
+
+.container {
+  min-height: 100vh;
 }

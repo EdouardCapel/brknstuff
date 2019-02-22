@@ -1,10 +1,40 @@
-<h1>My Items</h1>
+<div class="container">
 
-<% @user_items.each do |item| %>
-  <ul class="list-inline">
-    <li><%= item.name %></li>
-    <li><%= item.description %></li>
-    <li><%= item.level %></li>
-    <li>$<%= item.price %></li>
-  </ul>
-<% end %>
+  <div class="tabs">
+    <a class="tab active" href="/myitems">
+      <p>My Items</p>
+    </a>
+    <a class="tab" href="/myrequests">
+      <p>My requests</p>
+    </a>
+    <a class="tab" href="/requests">
+      <p>Incoming Requests</p>
+    </a>
+    <a class="tab" href="/">
+      <p>Complaints</p>
+    </a>
+  </div>
+
+ <div class ="display-container">
+
+  <% if @user_items.size == 0 %>
+    <h3>Why are you here?! Go <span style= "font-family:Freckle Face; font-size:150%;">break</span> something!</h3>
+  <% else %>
+    <% @user_items.each do |item| %>
+      <ul class="list-inline">
+        <div class="message">
+          <div class="message-name">
+            <p><strong><%= item.name %></strong></p>
+          </div>
+          <div class="message-body">
+            <p><%= item.description %></p>
+          </div>
+          <div class="message-status">
+            <p class="status pending">Damage level: <%= item.level %></p>
+            <p class="price">$<%= item.price %></p>
+          </div>
+        </div>
+      </ul>
+    <% end %>
+  <% end %>
+</div>
