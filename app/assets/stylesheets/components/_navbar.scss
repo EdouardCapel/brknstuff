@@ -1,41 +1,18 @@
 .navbar-brknstuff {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #d84c73;
-  padding: 20px 24px;
-}
-
-.navbar-brknstuff .brand {
-  width: 40px;
-}
-
-.navbar-brknstuff .navbar-brknstuff-actions {
+  position: fixed;
+  top: 0;
   width: 100%;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  color: white;
-}
-
-.navbar-brknstuff .navbar-brknstuff-actions .navbar-brknstuff-link {
-  margin-left: 24px;
-  color: #999999;
-}
-.navbar-brknstuff .navbar-brknstuff-actions .navbar-brknstuff-link:hover {
-  color: #151515;
-}
-
-
-.navbar-brknstuff .navbar-brknstuff-actions .avatar {
-  margin-left: 24px;
-}
-
-.navbar-brknstuff .dropdown-toggle {
-  cursor: pointer;
+  background: #d84c73;
+  height: 120px;
+  z-index: 1000;
+  // padding: 20px 24px;
 }
 
 .navbar-brknstuff-title a {
+  position: absolute;
+  width: 278px;
+  top: 20px;
+  left: calc(50vw - 139px);
   font-family: 'Freckle Face', cursive;
   color: white;
   font-size: 60px;
@@ -44,8 +21,24 @@
   }
 }
 
-.dropdown {
-  padding: 0px 12px;
-  font-size: 40px;
+.add-item {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
+.right-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.push-down {
+  height: 120px;
+}

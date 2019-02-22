@@ -1,18 +1,18 @@
+<div class="push-down"></div>
 <div class="navbar-brknstuff">
-
-  <!-- displayed on laptops -->
-  <div class="navbar-brknstuff-actions d-none d-sm-flex">
-
+    <!-- displayed on laptops -->
     <div class="add-item">
       <%= link_to "ADD ITEM", new_item_path, class: "btn" %>
     </div>
 
     <div class="navbar-brknstuff-title"><%= link_to "BrKnStUFf",  items_path%></div>
 
-    <% if action_name == "myitems" || action_name == "myrequests" || controller_name == "requests" && action_name == "index" || controller_name == "requests" && action_name == "requests#"%>
-      <div><%= link_to "LOGOUT",  destroy_user_session_path,  :method => :delete, class: "btn"%></div>
-    <% else %>
-      <div><%= link_to "DASHBOARD",  myitems_path, class: "btn" %></div>
-    <% end %>
-  </div>
+    <div class="right-button">
+      <% if action_name == "myitems" || action_name == "myrequests" || controller_name == "requests" && action_name == "index" || controller_name == "requests" && action_name == "requests#"%>
+        <div><%= link_to "LOGOUT",  destroy_user_session_path,  :method => :delete, class: "btn"%></div>
+      <% else %>
+        <div><%= link_to "DASHBOARD",  myitems_path, class: "btn" %></div>
+      <% end %>
+    </div>
+
 </div>
