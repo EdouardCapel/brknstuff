@@ -2,11 +2,30 @@
   <div class="item-image"></div>
   <div class="item-name">
     <h1 class="text-center"><%= @item.name %></h1>
+    <h6>Owned by <strong><%= @item.user.email %></strong></h6>
   </div>
   <div class="item-description">
     <p><%= @item.description %></p>
+    <p>Damage Level: <%= @item.level %></p>
+    <h4>Per Day: $<%= @item.price %></h4>
+
+
+
   </div>
-  <div class="cta">
-    <p><%= link_to "RENT THIS ITEM",  new_item_request_path(@item), class: "btn" %></p>
+  <div class="calendar">
+    <%= simple_form_for [@item, @request] do |f| %>
+      <div class="input-group input-daterange">
+          <input name="start" type="text" class="form-control" autocomplete="off">
+          <div class="input-group-addon">to</div>
+          <input name="end" type="text" class="form-control" autocomplete="off">
+      </div>
+
+      <%= f.submit "Confirm dates", class: "btn btn-primary submit" %>
+    <% end %>
   </div>
+  <!-- <div class="cta">
+    <p><%# link_to "RENT THIS ITEM",  new_item_request_path(@item), class: "btn" %></p>
+  </div> -->
 </div>
+
+<%= javascript_pack_tag 'datepicker' %>

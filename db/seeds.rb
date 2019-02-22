@@ -52,7 +52,9 @@ nbr_request.times do
   request = Request.new(
     user: renter,
     item: item,
-    status: rand(2)
+    status: rand(2),
+    start_date: Time.now,
+    end_date: Time.now + 3.day
   )
   request.save!
 end
@@ -79,7 +81,9 @@ brknrocket = Item.create!(
 Request.create!(
     user: jeffbezos,
     item: brknrocket,
-    status: 2
+    status: 2,
+    start_date: Time.now,
+    end_date: Time.now + 1.day
   )
 
 puts 'Seed complete'
