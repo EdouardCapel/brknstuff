@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>brknstuff (in development)</title>
+    <title>brknstuff - the no. 1 site for trash</title>
 
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -12,6 +12,8 @@
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
 
+    <!-- Favico Icon -->
+    <link rel="shortcut icon" type="image/png" href="<%= image_path "hammer.png" %>"/>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
