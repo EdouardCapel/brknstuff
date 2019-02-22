@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get "/myitems", to: "items#myitems"
   get "/myrequests", to: "requests#myrequests"
+  get "/notification", to: "requests#notification"
 
   root to: 'items#index'
 
