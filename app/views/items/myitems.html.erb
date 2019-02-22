@@ -24,6 +24,9 @@
     <% @user_items.each do |item| %>
       <ul class="list-inline">
         <div class="message">
+          <div class="message-img">
+            <img class="image" src="<%= item.photo %>" alt="photo">
+          </div>
           <div class="message-name">
             <p><strong><%= item.name %></strong></p>
           </div>

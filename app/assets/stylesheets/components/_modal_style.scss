@@ -8,3 +8,35 @@
 .modal-backdrop {
    background-color: $light-pink;
 }
+
+.image-size {
+  height: 200px;
+  width: 300px;
+}
+
+.form-control {
+  border-width: 4px;
+  border-color: $max-lied;
+}
+
+.input-group-addon {
+  background-color: white;
+  color: $max-lied;
+  border: none;
+}
+
+.message-img {
+  height: 40px;
+  width: 60px;
+}
+
+// .highlight-pink {
+//   background-color: #d84c73;
+//   opacity: 0.4;
+// }
+
+.purple-text{
+  color: #5c3b6f;
+  font-weight: lighter;
+  opacity: 0.6;
+}
