@@ -53,6 +53,15 @@ class RequestsController < ApplicationController
     # @owner_items = current_user.items
     @user_requests = Request.where(user: current_user)
   end
+
+  def notification
+    recent_notifications = Request
+      .where("updated_at > ?", Time.now - 5.minute)
+      .where(user: current_user)
+      .where.not(status: '0')
+
+    render json: { notifications: recent_notifications }
+  end
 end
 
 private
