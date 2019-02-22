@@ -2,25 +2,24 @@
   <div class="item-image"></div>
   <div class="item-name">
     <h1 class="text-center"><%= @item.name %></h1>
-    <h6>Owned by <strong><%= @item.user.email %></strong></h6>
+    <h6 class="purple-text">Owned by <strong><%= @item.user.email %></strong></h6>
   </div>
-  <div class="item-description">
+  <div class="item-description purple-text">
     <p><%= @item.description %></p>
     <p>Damage Level: <%= @item.level %></p>
-    <h4>Per Day: $<%= @item.price %></h4>
-
-
-
+    <h6>Per Day: $<%= @item.price %></h6>
+    <img class="image-size" src="<%= @item.photo %>" alt="photo">
   </div>
   <div class="calendar">
+    <br>
     <%= simple_form_for [@item, @request] do |f| %>
       <div class="input-group input-daterange">
           <input name="start" type="text" class="form-control" autocomplete="off">
           <div class="input-group-addon">to</div>
           <input name="end" type="text" class="form-control" autocomplete="off">
       </div>
-
-      <%= f.submit "Confirm dates", class: "btn btn-primary submit" %>
+      <br>
+      <%= f.submit "Confirm dates", class: "btn" %>
     <% end %>
   </div>
   <!-- <div class="cta">
