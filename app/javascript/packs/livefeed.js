@@ -1,7 +1,7 @@
 console.log("test")
 
 document.addEventListener("DOMContentLoaded", () => {
-  setInterval(updateFeed, 1000); // Every 1 second, the `refresh` function is called.
+  setInterval(updateFeed, 5000); // Every 1 second, the `refresh` function is called.
 });
 
 const updateFeed = (event) => {
@@ -18,7 +18,9 @@ const updateFeed = (event) => {
 };
 
 const updateNavbar = () => {
-  console.log();
-  const notify = "<p>You have a new notification</p>";
-  results.insertAdjacentHTML("beforeend", words);
+  const navbar = document.querySelector("#flash-notification-container")
+  const notify_message = `<div class="flash flash-notification">
+  <span>You have a new <strong> trash! </strong> &nbsp <i class="fas fa-trash"></i></span>
+</div>`;
+  navbar.innerHTML = notify_message;
 }
