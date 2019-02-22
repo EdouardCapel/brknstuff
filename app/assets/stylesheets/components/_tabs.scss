@@ -2,7 +2,7 @@
   background: #ff8484;
   display: flex;
   padding: 40px 0px 0px 0px;
-
+  z-index: 1;
 }
 .tabs a {
   color: white;
@@ -33,6 +33,7 @@
 .tab:last-child {
   border-radius: 0 25px 0 0;
   box-shadow: 20px 20px 0px #d84c73;
+
 }
 .tab.active {
   background: white;

@@ -1,6 +1,10 @@
 .modal-style {
   border: 8px solid $max-lied;
   text-align: center;
-  min-height: 400px;
   box-shadow: 20px 20px 0px 0px $dark-purple;
+  padding: 25px 25px 35px 25px;
+}
+
+.modal-backdrop {
+   background-color: $light-pink;
 }

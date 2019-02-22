@@ -37,7 +37,7 @@ class RequestsController < ApplicationController
     @request.user = current_user
 
     if @request.save!
-      redirect_to requests_path
+      redirect_to myrequests_path
     else
       render :new
     end

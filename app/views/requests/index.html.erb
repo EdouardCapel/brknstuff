@@ -25,12 +25,17 @@
         <% total_requests += item.requests.size %>
 
           <% item.requests.each do |request| %>
+            <% range = (request.end_date - request.start_date).to_i %>
             <div class="message">
               <div class="message-name">
                 <p><%= request.item.name %></p>
               </div>
               <div class="message-body">
                 <p><%= request.user.email %></p>
+              </div>
+              <div class="message-body">
+                <p>Rental Period: <%= range %> Day(s)</p>
+                <p>Total: $<%= range * request.item.price %></p>
               </div>
               <div class="message-status">
                   <% case request.status %>
