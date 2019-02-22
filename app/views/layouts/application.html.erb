@@ -22,7 +22,7 @@
   <body>
 
     <%= render "shared/navbar" %>
-    <%= render "shared/flash" %>
+    <div id="flash-notification-container"><%= render "shared/flash" %></div>
 
     <%= yield %>
     <%= javascript_include_tag 'application' %>
